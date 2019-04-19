@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticQuery, Link, graphql } from 'gatsby';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
+import MuiLink from '@material-ui/core/Link';
 
 export default ({ children }) => (
   <StaticQuery
@@ -15,11 +15,11 @@ export default ({ children }) => (
       }
     `}
     render={data => (
-      <div style={{ maxWidth: 700, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <CssBaseline />
-        <Typography component={Link} variant='h3' to='/'>
+        <MuiLink component={Link} variant='caption' to='/'>
           {data.site.siteMetadata.title}
-        </Typography>
+        </MuiLink>
         {children}
       </div>
     )}
