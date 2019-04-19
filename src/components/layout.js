@@ -17,7 +17,7 @@ export default ({ children }) => (
     render={data => (
       <div style={{ maxWidth: 1100, margin: '0 auto' }}>
         <CssBaseline />
-        <MuiLink component={Link} variant='caption' to='/'>
+        <MuiLink component={Link} variant="caption" to="/">
           {data.site.siteMetadata.title}
         </MuiLink>
         {children}

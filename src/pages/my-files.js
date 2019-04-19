@@ -12,7 +12,7 @@ import Layout from '../components/layout';
 export default ({ data }) => {
   return (
     <Layout>
-      <Typography variant='h1'>My Site's Files</Typography>
+      <Typography variant="h1">My Site's Files</Typography>
       <Table>
         <TableHead>
           <TableRow>

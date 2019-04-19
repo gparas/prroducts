@@ -3,6 +3,8 @@ module.exports = {
     title: `Title from siteMetadata`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-csv`,
     {
       resolve: `gatsby-source-filesystem`,

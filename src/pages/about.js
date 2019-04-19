@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 
 export default ({ data }) => (
   <Layout>
-    <Typography component='h1' variant='h1'>
+    <Typography component="h1" variant="h1">
       About {data.site.siteMetadata.title}
     </Typography>
     <Typography>

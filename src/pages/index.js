@@ -1,43 +1,14 @@
 import React from 'react';
-import { Link, graphql } from "gatsby";
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
+import Button from '@material-ui/core/Button';
 import Layout from '../components/layout';
 
-export default ({ data }) => (
+export default () => (
   <Layout>
-    <Typography>prroducts</Typography>
-    <Grid container spacing={16}>
-      {data.allProductsCsv.edges.map(({ node }) => (
-        <Grid key={node.id} item md={4}>
-          <Card>
-            <CardActionArea component={Link} to={`/${node.slug}`}>
-              <CardContent>
-                <Typography align="center">{node.title}</Typography>
-                <Typography align="center">{node.price}</Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <Typography variant="h3">prroducts</Typography>
+    <Button component={Link} variant="contained" to="/products" color="primary">
+      view products
+    </Button>
   </Layout>
 );
-
-export const query = graphql`
-  query {
-    allProductsCsv {
-      edges {
-        node {
-          id
-          title
-          price
-          slug
-        }
-      }
-    }
-  }
-`
