@@ -14,6 +14,10 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-datocms`,
+      options: { apiToken: `d8d6932a43cfede3a3fa6c07ae6678` },
+    },
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {

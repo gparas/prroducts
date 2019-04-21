@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -18,6 +17,7 @@ export default ({ data, pageContext }) => {
       ? '/'
       : `/products/page=${(currentPage - 1).toString()}`;
   const nextPage = `/products/page=${(currentPage + 1).toString()}`;
+  console.log(data);
   return (
     <Layout>
       <Typography>prroducts</Typography>
@@ -27,11 +27,7 @@ export default ({ data, pageContext }) => {
             <Card>
               <CardActionArea component={Link} to={`/${node.slug}`}>
                 <CardContent>
-                  <Img
-                    fixed={`http://prroducts.com/scraper/images/${
-                      node.collection
-                    }/${node.images}`}
-                  />
+                  <Avatar src={node.images} alt={node.title} />
                   <Typography align="center">{node.title}</Typography>
                   <Typography align="center">{node.price}</Typography>
                 </CardContent>
