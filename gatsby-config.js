@@ -7,6 +7,7 @@ module.exports = {
     title: `Title from siteMetadata`,
   },
   plugins: [
+    `source-prroducts`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-csv`,
